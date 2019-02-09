@@ -1,14 +1,14 @@
 function palindrome(str) {
-  var a = str.replace(/[\W_+]/g, "").toLowerCase();
-  var e = a.split("");
+  var str_replace = str.replace(/[\W_+]/g, "").toLowerCase();
+  var str_split = str_replace.split("");
   var revArr = [];
-  while (e.length > 0) {
-    var b = e.pop();
-    revArr.push(b);
+  while (str_split.length > 0) {
+    var str_pop = str_split.pop();
+    revArr.push(str_pop);
   }
-  var c = revArr.toString();
-  var d = c.replace(/,/g, "");
-  if (d == a) {
+  var revArrToString = revArr.toString();
+  var replaced = revArrToString.replace(/,/g, "");
+  if (replaced == str_replace) {
     return true;
   }
   else {
