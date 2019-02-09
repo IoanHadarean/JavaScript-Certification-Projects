@@ -1,8 +1,6 @@
 function telephoneCheck(str) {
     var newStr = str.replace(/\W\s/g, "");
     var arr = newStr.split("");
-    var leftBracket = 0;
-    var rightBracket = 0;
     var sum = 0;
     var arr2 = str.split("");
     var regex1 = /1 555|555/;
@@ -17,11 +15,9 @@ function telephoneCheck(str) {
     }
     for (var i = 0; i < arr2.length; i++) {
         if (arr2[i] === "(") {
-            leftBracket += 1;
             sum += 1;
         }
         else if (arr2[i] === ")") {
-            rightBracket += 1;
             sum += 1;
         }
     }
